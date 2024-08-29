@@ -8,7 +8,10 @@ const serverPort = process.env.PORT || 5000
 const app = express()
 app.use(express.json())
 
-app.get("/", (req, rest) => {
+app.get("/2tds2", (req, rest) => {
+       return rest.status(200).send({  message: "Hello, World!" })
+})
+app.get("/2tds2", (req, rest) => {
        return rest.status(200).send({  message: "Hello, World!" })
 })
 
