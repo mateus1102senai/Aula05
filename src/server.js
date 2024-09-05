@@ -1,25 +1,15 @@
 import express from 'express'
 import { config } from 'dotenv'
 
+import routes from './routes/index.routes.js'
+
 config()
 
-const serverPort = process.env.PORT || 5000
+const serverPort = process.env.PORT || 5000 
 
 const app = express()
 app.use(express.json())
-
-
-
-
-
-app.get("/2tds2", (req, rest) => {
-       return rest.status(200).send({message: "Olá Chefe, Bom dia!!"})
-});
-
-
-
-
-
+app.use(routes);
 
 
 
